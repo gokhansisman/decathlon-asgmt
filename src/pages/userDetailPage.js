@@ -1,23 +1,35 @@
-import React,{ useEffect, useState } from 'react'
+import React, {
+    useEffect
+} from 'react'
 import {
     useParams
-  } from "react-router-dom";
+} from "react-router-dom";
 import { useSelector, useDispatch } from 'react-redux';
 import { fetch_user_byID } from '../store/actions/actions';
 
+import UserDetailsCard from '../components/userDetailsCard';
 
 function UserDetailPage() {
     const userDetailDispatch = useDispatch();
-    const { user } = useSelector(state => state.userDetail);
-    useEffect(() => {
-        userDetailDispatch(fetch_user_byID("mCynCk9ntQGzX9uxgqDx"));
-    }, [])
-    console.log(user);
+    const { userDetail } = useSelector(state => state.userDetail);
     const { id } = useParams()
-    console.log(id)
+    useEffect(() => {
+        userDetailDispatch(fetch_user_byID(id));
+    }, [])
     return (
         <div>
-            User Detail Page
+            {userDetail && <UserDetailsCard
+                dateOfBirth={userDetail.dateOfBirth}
+                email={userDetail.email}
+                firstName={userDetail.firstName}
+                gender={userDetail.gender}
+                id={userDetail.id}
+                lastName={userDetail.lastName}
+                location={userDetail.location}
+                phone={userDetail.phone}
+                picture={userDetail.picture}
+                registerDate={userDetail.registerDate}
+                title={userDetail.title} />}
         </div >
     )
 }

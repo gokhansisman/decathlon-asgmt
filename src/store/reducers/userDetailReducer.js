@@ -4,7 +4,7 @@ const initialState = {
    
    const reducer = (state = initialState, action) => {
      switch (action.type) {
-       case 'FETCH_USER_DETAIL':
+       case 'FETCH_USER_DETAILS':
          return{
            ...state,
            userDetail:action.payload.userDetail

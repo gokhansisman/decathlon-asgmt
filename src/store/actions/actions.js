@@ -60,7 +60,7 @@ export const fetch_user_byID = (id) => {
             .then(res => res.json())
             .then(json => {
                 dispatch({
-                    type: 'FETCH_USERS_LIST', payload: {
+                    type: 'FETCH_USER_DETAILS', payload: {
                         userDetail:json
                     }
                 })

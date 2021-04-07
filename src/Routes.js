@@ -4,10 +4,11 @@ import MainPage from './pages/mainPage'
 import UsersPage from './pages/usersPage'
 import UserDetailPage from './pages/userDetailPage'
 import history from './history';
-
+import Header from './components/header'
 const Routes = () => {
   return (
     <Router history={history}>
+      <Header/>
       <Switch>
         <Route exact path="/" component={MainPage}/>
         <Route exact path="/users" component={UsersPage}/>

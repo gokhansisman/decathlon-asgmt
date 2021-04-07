@@ -1,8 +1,25 @@
+body{
+background: #5f2c82;  
+background: -webkit-linear-gradient(to right, #49a09d, #5f2c82);  
+background: linear-gradient(to right, #49a09d, #5f2c82); 
 
+}
 
 .post-container {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     margin: 100px;
     row-gap: 20px;
+}
+
+.header{
+font-size:32px;
+display:flex;
+justify-content: space-around;
+height:100px;
+align-items: center;
+}
+.header a {
+    text-decoration: none;
+    color:#031f4e;
 }
