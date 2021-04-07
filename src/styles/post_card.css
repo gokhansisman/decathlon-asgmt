@@ -128,3 +128,26 @@
   display: flex;
     justify-content: space-between;
 }
+@media (max-width:420px) and (min-width:0px){
+  .user-container {
+    display: grid !important;
+    grid-template-columns: repeat(1, 1fr)!important;
+    margin: 100px !important;
+    justify-items: center!important;
+}
+.user__details__card{
+  width: 320px!important;
+    height: 720px;
+    background-color: transparent;
+    position: relative;
+    transition: all ease-in-out 0.2s;
+    text-align: center;
+}
+.post-container{
+  display: grid;
+    grid-template-columns: repeat(1, 1fr)!important;;
+    margin: 20px!important;;
+    grid-row-gap: 20px;
+    row-gap: 20px;
+}
+}
